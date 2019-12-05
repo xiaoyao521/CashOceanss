@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+
+    <FrameLayout
+        android:id="@+id/contiainer_authentication"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/ibn_back"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:background="@color/color_transparent"
+            android:contentDescription="back"
+            android:scaleType="center"
+            android:src="@mipmap/arrow_back" />
+
+        <TextView
+            style="@style/Style_Text_Size_16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/informasi"
+            android:textColor="@color/cash_mall_text_color_dark"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btn_submit_identity"
+        style="@style/Style_Text_Size_14sp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/shape_green_btn_bg"
+        android:gravity="center"
+        android:text="@string/immediately_apply"
+        android:textColor="@color/color_white" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_submit_identity"
+        android:layout_below="@id/contiainer_authentication"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--提示-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/cash_mall_bg"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="13dp"
+                    android:src="@mipmap/authenticaition_hint_icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="@string/identity_top_desc"
+                    android:textColor="@color/cash_mall_text_color_dark"
+                    android:textSize="12sp" />
+            </LinearLayout>
+            <!--姓名-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Style_Text_Size_14sp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/my_name"
+                    android:textColor="@color/cash_mall_text_color_dark" />
+
+                <EditText
+                    android:id="@+id/et_name"
+                    style="@style/Style_Text_Size_14sp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@drawable/shape_identity_id_num"
+                    android:gravity="right|center"
+                    android:hint="@string/please_input"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapSentences"
+                    android:nextFocusForward="@id/et_identity_number"
+                    android:singleLine="true"
+                    android:textCursorDrawable="@null"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/font_black_5" />
+            <!--证件类型-->
+            <LinearLayout
+                android:id="@+id/line_card_type"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Style_Text_Size_14sp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/id_type"
+                    android:textColor="@color/cash_mall_text_color_dark" />
+
+                <TextView
+                    android:id="@+id/tv_card_type"
+                    style="@style/Style_Text_Size_12sp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:drawableRight="@mipmap/home_down_arrow"
+                    android:drawablePadding="5dp"
+                    android:gravity="right|center"
+                    android:text="@string/identity_id"
+                    android:textColor="@color/cash_mall_text_color_dark"
+                    android:textCursorDrawable="@null" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/font_black_5" />
+            <!--身份证号码-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Style_Text_Size_14sp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/identity_number"
+                    android:textColor="@color/cash_mall_text_color_dark" />
+
+                <com.xw.repo.XEditText
+                    android:id="@+id/et_identity_number"
+                    style="@style/Style_Text_Size_14sp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@drawable/shape_identity_id_num"
+                    android:gravity="right|center"
+                    android:hint="@string/please_input"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapSentences"
+                    android:maxLength="18"
+                    android:singleLine="true"
+                    android:textCursorDrawable="@null"
+                    android:textSize="12sp"
+                    app:x_separator="-" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/cash_mall_bg" />
+
+
+            <TextView
+                style="@style/Style_Text_Size_14sp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:text="@string/hint_input_id_photo"
+                android:textColor="@color/cash_mall_text_color_dark" />
+
+            <ImageView
+                android:id="@+id/im_identity_id_car_photo"
+                android:layout_width="match_parent"
+                android:layout_height="114dp"
+                android:layout_centerInParent="true"
+                android:scaleType="centerInside"
+                android:src="@mipmap/id_card" />
+
+            <TextView
+                style="@style/Style_Text_Size_10sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:text="@string/hint_click_photo"
+                android:textColor="@color/cash_mall_text_color_dark" />
+
+            <TextView
+                style="@style/Style_Text_Size_14sp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:text="@string/hint_click_face_photo"
+                android:textColor="@color/cash_mall_text_color_dark" />
+
+            <ImageView
+                android:id="@+id/im_face_photo"
+                android:layout_width="match_parent"
+                android:layout_height="114dp"
+                android:layout_centerInParent="true"
+                android:scaleType="centerInside"
+                android:src="@mipmap/face_photo" />
+
+            <TextView
+                style="@style/Style_Text_Size_10sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:text="@string/hint_click_photo"
+                android:textColor="@color/cash_mall_text_color_dark" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginRight="20dp"
+                android:text="@string/identity_bottom_desc"
+                android:textColor="@color/cash_mall_text_color_dark"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

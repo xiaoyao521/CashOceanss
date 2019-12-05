@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+
+    <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/Style_Text_Size_16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20dp"
+                android:text="@string/app_name"
+                android:textColor="@color/cash_mall_text_color_dark"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_language"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:gravity="left|center_vertical"
+                android:paddingRight="15dp"
+                android:text="@string/language"
+                android:textColor="@color/main_color"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/tv_title"
+            android:background="@color/cash_mall_bg" />
+    </LinearLayout>
+
+
+    <com.jike.cashocean.view.SmoothListView.SmoothListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/line"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:fadingEdge="none"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+
+
+    <com.jike.cashocean.view.FilterView
+        android:id="@+id/real_filterView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line"
+        android:visibility="visible" />
+
+</RelativeLayout>

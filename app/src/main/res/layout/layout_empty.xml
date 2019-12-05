@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="114dp"
+        android:layout_height="114dp"
+        android:background="@mipmap/empty"
+        android:contentDescription="TODO" />
+
+    <TextView
+        style="@style/Style_Text_Size_18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/internet_connection_failed"
+        android:textColor="@color/colorPrimary" />
+
+    <TextView
+        style="@style/Style_Text_Size_18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/click_me_to_retry"
+        android:textColor="@color/colorPrimary" />
+</LinearLayout>

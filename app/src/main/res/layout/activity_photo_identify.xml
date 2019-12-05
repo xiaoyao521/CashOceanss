@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.otaliastudios.cameraview.CameraView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/camera_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:keepScreenOn="true"
+        app:cameraAudio="on"
+        app:cameraCropOutput="false"
+        app:cameraFacing="front"
+        app:cameraFlash="off"
+        app:cameraGestureLongTap="none"
+        app:cameraGesturePinch="zoom"
+        app:cameraGestureScrollHorizontal="exposureCorrection"
+        app:cameraGestureScrollVertical="none"
+        app:cameraGestureTap="focusWithMarker"
+        app:cameraGrid="off"
+        app:cameraJpegQuality="100"
+        app:cameraPlaySounds="true"
+        app:cameraSessionType="picture" />
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/icon_24_identify"
+        android:contentDescription="TODO" />
+
+    <!--//描述-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/ibtn_finish_screen_identify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/color_transparent"
+            android:contentDescription="TODO"
+            android:paddingRight="20dp"
+            android:paddingBottom="20dp"
+            android:src="@mipmap/icon_27" />
+
+        <TextView
+            style="@style/Style_Text_Size_14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="@string/must_self_identity"
+            android:textColor="@color/cash_mall_text_color_light" />
+
+        <TextView
+            style="@style/Style_Text_Size_14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:text="@string/ktp_terlihat_jelas"
+            android:textColor="@color/cash_mall_text_color_light" />
+
+    </LinearLayout>
+
+    //拍照按钮
+
+    <ImageButton
+        android:id="@+id/ibtn_screen_identify_taken"
+        android:layout_width="52dp"
+        android:layout_height="260dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:background="@color/color_transparent"
+        android:contentDescription="TODO"
+        android:src="@mipmap/icon_23" />
+    //确认 重拍
+
+    <LinearLayout
+        android:id="@+id/container_confirm_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/ibtn_screen_identify_confirm"
+            android:layout_width="52dp"
+            android:layout_height="120dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/color_transparent"
+            android:contentDescription="TODO"
+            android:src="@mipmap/icon_25" />
+
+        <ImageButton
+            android:id="@+id/ibtn_screen_identify_cancel"
+            android:layout_width="52dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/color_transparent"
+            android:contentDescription="TODO"
+            android:src="@mipmap/icon_26" />
+    </LinearLayout>
+
+
+</RelativeLayout>

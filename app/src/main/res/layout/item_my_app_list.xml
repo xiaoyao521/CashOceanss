@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="144dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/cash_mall_bg" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingRight="20dp">
+        <!--别删除，这个是锚点-->
+        <ImageView
+            android:id="@+id/app_logo"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/tv_app_name"
+            style="@style/Style_Text_Size_14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/app_logo"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/app_logo"
+            android:ellipsize="end"
+            android:text="App name"
+            android:textColor="@color/cash_mall_text_color_dark"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/btn"
+            style="@style/Style_Text_Size_12sp"
+            android:layout_width="75dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/shape_green_btn_bg"
+            android:text="@string/applay"
+            android:textColor="@color/color_white" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/Style_Text_Size_12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/app_logo"
+            android:layout_alignLeft="@id/app_logo"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="6dp"
+            android:text="2019-12-12 12:52:32"
+            android:textColor="@color/cash_mall_text_color_dark" />
+
+        <TextView
+            style="@style/Style_Text_Size_12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_time"
+            android:layout_alignLeft="@id/app_logo"
+            android:layout_marginTop="4dp"
+            android:text="@string/click_time"
+            android:textColor="@color/cash_mall_text_color_dark" />
+
+        <TextView
+            android:id="@+id/tv_desc_count"
+            style="@style/Style_Text_Size_12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/app_logo"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="160dp"
+            android:layout_marginBottom="6dp"
+            android:text="500 Rp"
+            android:textColor="@color/cash_mall_text_color_dark" />
+
+        <TextView
+            style="@style/Style_Text_Size_12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_desc_count"
+            android:layout_alignLeft="@id/tv_desc_count"
+            android:layout_marginTop="4dp"
+            android:text="@string/estimated_amount"
+            android:textColor="@color/cash_mall_text_color_dark" />
+
+        <View
+            android:id="@+id/bottom_divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/btn"
+            android:layout_marginTop="10dp"
+            android:background="@color/cash_mall_bg" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

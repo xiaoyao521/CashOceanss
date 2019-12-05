@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="197dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv_hot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:src="@mipmap/icon_hot" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingRight="20dp">
+
+        <Button
+            android:id="@+id/btn"
+            style="@style/Style_Text_Size_12sp"
+            android:layout_width="75dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/tv_app_name"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/shape_green_btn_bg"
+            android:clickable="false"
+            android:text="@string/applay"
+            android:textColor="@color/color_white" />
+
+
+        <TextView
+            android:id="@+id/tv_app_name"
+            android:textSize="17sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/card_view"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/card_view"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:text="App name"
+            android:textColor="@color/cash_mall_text_color_dark"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_score"
+            android:textSize="11sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="6dp"
+            android:layout_alignTop="@id/card_view"
+            android:layout_toRightOf="@id/tv_app_name"
+            android:text="4.9"
+            android:textColor="@color/cash_mall_text_read_dark" />
+
+        <TextView
+            android:id="@+id/tv_limet_range"
+            style="@style/Style_Text_Size_12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card_view"
+            android:layout_alignLeft="@id/card_view"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="6dp"
+            android:text="@string/limit_range"
+            android:textColor="@color/cash_mall_text_color_dark" />
+
+        <TextView
+            android:id="@+id/tv_limet_range_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_limet_range"
+            android:layout_alignLeft="@id/card_view"
+            android:layout_marginTop="4dp"
+            android:text="1000-3000"
+            android:textColor="@color/cash_mall_text_read_dark"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_free_rate"
+            style="@style/Style_Text_Size_12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card_view"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="6dp"
+            android:layout_toRightOf="@id/view_parting"
+            android:text="@string/rate"
+            android:textColor="@color/cash_mall_text_color_dark" />
+
+        <TextView
+            android:id="@+id/tv_free_rate_count"
+            style="@style/Style_Text_Size_16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_free_rate"
+            android:layout_alignLeft="@id/tv_free_rate"
+            android:layout_alignBottom="@id/tv_limet_range_count"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="≥2.00"
+            android:textColor="@color/cash_mall_text_color_dark"/>
+
+        <TextView
+            android:id="@+id/tv_desc_bottom"
+            style="@style/Style_Text_Size_11sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bottom_divider"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:ellipsize="end"
+            android:maxLength="45"
+            android:maxLines="1"
+            android:text="qweeewwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
+            android:textColor="@color/cash_mall_text_color_dark" />
+
+        <View
+            android:id="@+id/view_parting"
+            android:layout_width="2dp"
+            android:layout_height="25dp"
+            android:layout_alignBottom="@+id/tv_free_rate_count"
+            android:layout_centerHorizontal="true"
+            android:background="@color/cash_mall_bg" />
+
+        <View
+            android:id="@+id/bottom_divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/tv_free_rate_count"
+            android:layout_marginTop="10dp"
+            android:background="@color/cash_mall_bg" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="39dp"
+            android:layout_height="39dp"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="4dp"
+            android:background="#00000000"
+            app:cardPreventCornerOverlap="true">
+
+            <ImageView
+                android:id="@+id/app_logo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:src="@mipmap/app_logo" />
+        </androidx.cardview.widget.CardView>
+
+        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+            android:id="@+id/ratingbar"
+            style="@style/Widget.MaterialRatingBar.RatingBar"
+            android:layout_width="11dp"
+            android:layout_height="11dp"
+            android:layout_alignTop="@+id/tv_score"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="-3dp"
+            android:layout_toRightOf="@+id/tv_score"
+            android:isIndicator="true"
+            android:maxHeight="10dp"
+            android:minHeight="10dp"
+            android:numStars="1"
+            android:rating="1"
+            app:mrb_progressTint="@color/cash_mall_text_read_dark"
+            app:mrb_secondaryProgressTint="@color/cash_mall_text_read_dark" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/cash_mall_bg" />
+
+</RelativeLayout>

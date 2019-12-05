@@ -1,0 +1,153 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        release {
+            storeFile file('C:\\Project\\cashocean\\cash.jks')
+            storePassword 'cashocean1016'
+            keyAlias = 'cashOcean'
+            keyPassword 'cashocean1016'
+        }
+    }
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        applicationId "com.jike.cashocean"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 5
+        versionName "1.0.4"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        resConfigs "en", "tl-rPH"
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    buildTypes {
+
+        release {
+            shrinkResources true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            debuggable false
+            jniDebuggable false
+            renderscriptDebuggable false
+        }
+        debug {
+            shrinkResources false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            debuggable true
+            jniDebuggable false
+            renderscriptDebuggable false
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation project(path: ':verificationlibrary')
+
+    implementation project(path: ':loadsir')
+
+    //相机新框架
+    implementation project(':cameraview_1.6.1')
+
+    //butterknife
+    implementation 'com.jakewharton:butterknife:10.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+
+    //dagger2
+    implementation 'com.google.dagger:dagger:2.21'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.21'
+
+    //Rx_Life
+    implementation 'com.trello.rxlifecycle2:rxlifecycle:2.1.0'
+    implementation 'com.trello.rxlifecycle2:rxlifecycle-components:2.1.0'
+
+    //swipebacklayout
+    implementation 'cn.bingoogolapple:bga-swipebacklayout:1.1.8@aar'
+
+    //statusBar
+    implementation 'com.jaeger.statusbarutil:library:1.5.0'
+
+    //retroift
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+
+    //androidutilcode
+    implementation 'com.blankj:utilcode:1.22.0'
+
+    //底部弹出选择器，三级联动
+    implementation 'com.contrarywind:Android-PickerView:4.1.8'
+
+    //fragmentation
+    implementation 'me.yokeyword:fragmentationx:1.0.1'
+
+    //eventbus
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+    //rxpermissions
+    implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'
+
+    //RxBinding
+    implementation 'com.jakewharton.rxbinding2:rxbinding:2.1.1'
+
+    //WebView
+    implementation 'com.github.delight-im:Android-AdvancedWebView:v3.0.0'
+
+    //circleImagView圆形图片
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+    implementation 'com.google.firebase:firebase-core:16.0.5'
+
+    //自定义的edittext,为了自动补全符号
+    implementation 'com.xw.repo:xedittext:2.1.0@aar'
+
+    implementation('com.github.bumptech.glide:glide:4.9.0') {
+        exclude group: "com.android.support"
+    }
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    //底部导航栏
+    implementation 'com.github.chaychan:BottomBarLayout:1.2.0'
+
+    //星星评分控件
+    implementation 'me.zhanghai.android.materialratingbar:library:1.3.2'
+    //Google 广告ID
+    implementation('com.google.android.gms:play-services-ads:18.1.1') {
+        //冲突时候优先使用该版本
+        force = true
+        //关闭依赖传递
+        transitive = false
+    }
+    //banner
+    implementation 'cn.bingoogolapple:bga-banner:2.2.6'
+    //OSS
+    implementation 'com.aliyun.dpa:oss-android-sdk:+'
+
+    implementation 'com.airbnb.android:lottie:3.1.0'
+    //RxCache
+    implementation 'com.github.VictorAlbertos.RxCache:runtime:1.8.3-2.x'
+    implementation 'com.github.VictorAlbertos.Jolyglot:gson:0.0.4'
+    implementation 'com.android.support:cardview-v7:29.0.0'
+    implementation 'com.facebook.android:facebook-android-sdk:[5,6)'
+    implementation 'com.sunfusheng:MarqueeView:1.4.1'
+}

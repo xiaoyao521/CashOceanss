@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.otaliastudios.cameraview.CameraView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/face_camera_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:keepScreenOn="true"
+        app:cameraAudio="on"
+        app:cameraCropOutput="false"
+        app:cameraFacing="front"
+        app:cameraFlash="off"
+        app:cameraGestureLongTap="none"
+        app:cameraGesturePinch="zoom"
+        app:cameraGestureScrollHorizontal="exposureCorrection"
+        app:cameraGestureScrollVertical="none"
+        app:cameraGestureTap="focusWithMarker"
+        app:cameraGrid="off"
+        app:cameraJpegQuality="100"
+        app:cameraPlaySounds="true"
+        app:cameraSessionType="picture" />
+
+    <ImageButton
+        android:id="@+id/ibtn_finish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/color_transparent"
+        android:paddingRight="20dp"
+        android:paddingBottom="20dp"
+        android:src="@mipmap/icon_27" />
+
+    //拍照按钮
+
+    <ImageView
+        android:id="@+id/ibtn_taken"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/shape_face_round" />
+
+    //人脸框
+
+    <ImageView
+        android:id="@+id/iv_face_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="90dp"
+        android:src="@mipmap/identity_face_bg"
+        android:tint="@color/cash_mall_text_color_light" />
+
+
+    <LinearLayout
+        android:id="@+id/container_confirm_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="18dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/ibtn_cancel"
+            android:layout_width="120dp"
+            android:layout_height="52dp"
+            android:layout_marginRight="22dp"
+            android:background="@color/color_transparent"
+            android:contentDescription="TODO"
+            android:src="@mipmap/face_btn_cancel" />
+
+        <ImageButton
+            android:id="@+id/ibtn_confirm"
+            android:layout_width="120dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="22dp"
+            android:background="@color/color_transparent"
+            android:contentDescription="TODO"
+            android:src="@mipmap/face_btn_confirm" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/ibn_back"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:background="@color/color_transparent"
+            android:scaleType="center"
+            android:src="@mipmap/arrow_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/Style_Text_Size_16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/about_us"
+            android:textColor="@color/cash_mall_text_color_dark"
+            android:textStyle="bold" />
+
+
+    </FrameLayout>
+
+
+    <im.delight.android.webview.AdvancedWebView
+        android:id="@+id/container_loadsir"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <!--<com.classic.common.MultipleStatusView-->
+        <!--app:emptyView="@layout/view_empty"-->
+        <!--app:errorView="@layout/view_err"-->
+        <!--app:loadingView="@layout/view_loading"-->
+        <!--app:noNetworkView="@layout/view_nonet"-->
+        <!--android:id="@+id/SimpleMultiStateView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+        <!---->
+    <!--</com.classic.common.MultipleStatusView>-->
+
+
+</LinearLayout>

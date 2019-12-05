@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#18B239</color>
+    <color name="colorPrimaryDark">@android:color/white</color>
+    <color name="colorAccent">#18B239</color>
+    <color name="cash_mall_text_color_dark">@android:color/black</color>
+    <color name="cash_mall_text_color_light">#18B239</color>
+    <color name="cash_mall_text_read_dark">#FFF16454</color>
+    <color name="cash_mall_bg">#FFF4F8F7</color>
+    <color name="color_transparent">@android:color/transparent</color>
+    <color name="color_white">@android:color/white</color>
+    <color name="main_color">#18B239</color>
+    <!-- common -->
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="half_transparent">#8f000000</color>
+    <color name="color_black">#000000</color>
+    <!-- background -->
+
+    <!-- material design black font color -->
+    <color name="font_black_2">#616161</color>
+    <color name="font_black_3">#757575</color>
+    <color name="font_black_5">#bdbdbd</color>
+    <color name="font_black_6">#e0e0e0</color>
+
+    <!-- divider -->
+
+</resources>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/ibn_back"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@color/color_transparent"
+                android:scaleType="center"
+                android:src="@mipmap/arrow_back" />
+
+            <TextView
+                style="@style/Style_Text_Size_16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Registration"
+                android:textColor="@color/cash_mall_text_color_dark"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:src="@mipmap/login_logo"
+            android:contentDescription="TODO" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:contentDescription="TODO"
+                android:src="@mipmap/icon_1" />
+
+            <TextView
+                style="@style/Style_Text_Size_14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="6dp"
+                android:background="@null"
+                android:gravity="center"
+                android:text="+63" />
+
+            <EditText
+                android:id="@+id/et_register_phone_num"
+                style="@style/Style_Text_Size_14sp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="9XXXXXXXXX"
+                android:inputType="phone|number"
+                android:maxLength="10"
+                android:textCursorDrawable="@null" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@color/cash_mall_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Style_Text_Size_14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/exsit_please_login"
+                android:textColor="@color/cash_mall_text_color_dark" />
+
+            <TextView
+                android:id="@+id/btn_login_register_phone"
+                style="@style/Style_Text_Size_14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/login"
+                android:textColor="@color/cash_mall_text_color_light" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_next_register_user"
+            style="@style/Style_Text_Size_14sp"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/shape_green_btn_bg"
+            android:gravity="center"
+            android:text="@string/next_step"
+            android:textColor="@color/color_white" />
+    </LinearLayout>
+
+</ScrollView>
+

@@ -1,0 +1,2 @@
+include ':app', ':verificationlibrary',':loadsir', ':cameraview_1.6.1'
+rootProject.name='CashOcean'

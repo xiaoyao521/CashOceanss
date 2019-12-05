@@ -1,0 +1,105 @@
+<resources>
+
+    <!--FullScreen 全屏-->
+    <style name="FullscreenTheme" parent="AppTheme">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!--loding等待-->
+    <style name="StyleWaitingAnimation" parent="android:Theme.Dialog">
+        <!-- 设置背景颜色 -->
+        <item name="android:windowBackground">@color/color_transparent</item>
+        <!-- 设置边框，@null没有边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 是否覆盖窗口的内容  @null:不覆盖内容-->
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 设置dialog的执行动画，@null：不设置动画 -->
+        <item name="android:windowAnimationStyle">@style/StyleSlideAnim</item>
+        <!-- 是否设置阴影 -->
+        <item name="android:backgroundDimEnabled">false</item>
+        <!-- 是否设置半透明的阴影效果 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 是否去除标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 设置触摸空白处是否会消失  false:不会 -->
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <!--全屏-->
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <!--dialog style-->
+    <style name="StyleDialogPop" parent="android:Theme.Dialog">
+        <!-- 设置背景颜色 -->
+        <item name="android:windowBackground">@color/color_transparent</item>
+        <!-- 设置边框，@null没有边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 是否覆盖窗口的内容  @null:不覆盖内容-->
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 设置dialog的执行动画，@null：不设置动画 -->
+        <item name="android:windowAnimationStyle">@style/StyleSlideAnim</item>
+        <!-- 是否设置阴影 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 是否设置半透明的阴影效果 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 是否去除标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 设置触摸空白处是否会消失  false:不会 -->
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <item name="android:screenSize">large</item>
+    </style>
+
+    <!--dialog进入页面动画样式-->
+    <style name="StyleSlideAnim" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_faed_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_faed_out</item>
+    </style>
+
+
+    <!--18sp 字体-->
+    <style name="Style_Text_Size_18sp">
+        <item name="android:textSize">@dimen/size_18</item>
+        <item name="android:textAppearance">?android:attr/textAppearance</item>
+        <item name="android:textColor">@color/cash_mall_text_color_light</item>
+    </style>
+
+    <!--16sp 字体-->
+    <style name="Style_Text_Size_16sp">
+        <item name="android:textSize">@dimen/size_16</item>
+        <item name="android:textAppearance">?android:attr/textAppearance</item>
+        <item name="android:textColor">@color/cash_mall_text_color_light</item>
+    </style>
+
+    <!--14sp 字体-->
+    <style name="Style_Text_Size_14sp">
+        <item name="android:textSize">@dimen/size_14</item>
+        <item name="android:textAppearance">?android:attr/textAppearance</item>
+        <item name="android:textColor">@color/cash_mall_text_color_light</item>
+    </style>
+
+    <!--12sp 字体-->
+    <style name="Style_Text_Size_12sp">
+        <item name="android:textSize">@dimen/size_12</item>
+        <item name="android:textAppearance">?android:attr/textAppearance</item>
+        <item name="android:textColor">@color/cash_mall_text_color_light</item>
+    </style>
+    <!--12sp 字体-->
+    <style name="Style_Text_Size_11sp">
+        <item name="android:textSize">@dimen/size_11</item>
+        <item name="android:textAppearance">?android:attr/textAppearance</item>
+        <item name="android:textColor">@color/cash_mall_text_color_light</item>
+    </style>
+    <!--10sp 字体-->
+    <style name="Style_Text_Size_10sp">
+        <item name="android:textSize">@dimen/size_10</item>
+        <item name="android:textAppearance">?android:attr/textAppearance</item>
+        <item name="android:textColor">@color/cash_mall_text_color_light</item>
+    </style>
+
+</resources>

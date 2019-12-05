@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_rectangle_white_box_bg">
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/Style_Text_Size_14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/item_height"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="@string/language"
+            android:textColor="@color/main_color"
+            android:textStyle="bold" />
+
+
+        <View
+            android:id="@+id/line_1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/tv_title"
+            android:background="@color/main_color" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/line_1"
+            android:layout_marginTop="@dimen/item_height"
+            android:background="@color/main_color" />
+
+        <RadioGroup
+            android:id="@+id/rg_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title"
+            android:layout_alignLeft="@+id/tv_title"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rb_language_english"
+                style="@style/Style_Text_Size_14sp"
+                android:layout_width="120dp"
+                android:layout_height="@dimen/item_height"
+                android:layout_gravity="center_horizontal"
+                android:button="@color/color_transparent"
+                android:checked="true"
+                android:drawableRight="@drawable/selector_customer_comments_bg"
+                android:text="@string/english"
+                android:textColor="@color/main_color" />
+
+
+            <RadioButton
+                android:id="@+id/rb_language_tagalog"
+                style="@style/Style_Text_Size_14sp"
+                android:layout_width="120dp"
+                android:layout_height="@dimen/item_height"
+                android:layout_gravity="center_horizontal"
+                android:button="@color/color_transparent"
+                android:drawableRight="@drawable/selector_customer_comments_bg"
+                android:text="@string/tagalog"
+                android:textColor="@color/main_color" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_cancle"
+        android:layout_width="@dimen/item_height"
+        android:layout_height="@dimen/item_height"
+        android:layout_below="@+id/rg_language"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:padding="8dp"
+        android:src="@mipmap/cancle_icon" />
+</LinearLayout>
+
